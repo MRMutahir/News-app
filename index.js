@@ -8,19 +8,19 @@ let cards_container = document.getElementById("cards-container");
 let templateNewsCard = document.getElementById("template-news-card");
 let SearchBtn = document.getElementById("SearchBtn");
 let formControl = document.querySelector(".form-control");
-SearchBtn.addEventListener("click", async () => {
-  cards_container.innerHTML = "";
-  const apiKey = "b7c304f15fea4e27b49a5450fa467349";
-  const urlNewsApi = `https://newsapi.org/v2/everything?q=${formControl.value}&`;
-  try {
-    const response = await fetch(`${urlNewsApi}apiKey=${apiKey}`);
-    const result = await response.json();
-    Ui(result);
-    formControl.value = "";
-  } catch (error) {
-    console.error(error);
-  }
-});
+// SearchBtn.addEventListener("click", async () => {
+//   cards_container.innerHTML = "";
+//   const apiKey = "b7c304f15fea4e27b49a5450fa467349";
+//   const urlNewsApi = `https://newsapi.org/v2/everything?q=${formControl.value}&`;
+//   try {
+//     const response = await fetch(`${urlNewsApi}apiKey=${apiKey}`);
+//     const result = await response.json();
+//     Ui(result);
+//     formControl.value = "";
+//   } catch (error) {
+//     console.error(error);
+//   }
+// });
 SearchBtn.addEventListener("click", async () => {
   cards_container.innerHTML = "";
   const apiKey = "b7c304f15fea4e27b49a5450fa467349";
